@@ -1,0 +1,57 @@
+# Lanaguage settings
+LANG="en_US.UTF-8"
+LANGUAGE="en"
+LC_CTYPE="en_US.UTF-8"
+LC_ALL="en_US.UTF-8"
+export LANG LANGUAGE LC_CTYPE LC_ALL
+
+# paths
+PATH="/usr/bin:/bin:/usr/sbin:/sbin"
+
+if [ -d "/usr/local" ]; then
+  PATH="/usr/local/bin:/usr/local/sbin:$PATH"
+fi
+
+if [ -d "$HOME/.bin" ]; then
+  PATH="$HOME/.bin:$PATH"
+fi
+
+if [ -d "/opt/local/bin" ]; then
+  PATH="/opt/local/bin/:$PATH"
+fi
+
+if [ -d "$HOME/projects/local/bin" ]; then
+  PATH="$HOME/projects/local/bin/:$PATH"
+fi
+
+#force python 2.7
+if [ -d "/opt/local/Library/Frameworks/Python.framework/Versions/2.7/bin" ]; then
+  PATH="/opt/local/Library/Frameworks/Python.framework/Versions/2.7/bin:$PATH"
+fi
+
+MANPATH="/usr/share/man:/usr/local/share/man"
+
+export PATH MANPATH
+
+#editor/pager
+EDITOR=vim
+PAGER="less -R"
+SVN_EDITOR=vim
+LESSHISTFILE="-"
+export EDITOR PAGER LESSHISTFILE SVN_EDITOR
+
+#colors
+CLICOLOR=1
+GREP_OPTIONS='--color=auto'
+LS_OPTIONS='--color=auth'
+export CLICOLOR GREP_OPTIONS LS_OPTIONS
+
+#virtualenvwrapper
+WORKON_HOME="~/projects/envs"
+export WORKON_HOME
+
+#terminal
+export PS1="\[\e[36;1m\]\u\[\e[1;37m\]@\[\e[32;1m\]\h\[\e[1;37m\]:[\t]:\[\e[0;31m\]\W\[\e[1;37m\]: \[\e[0m\]"
+
+#editing mode
+set -o vi

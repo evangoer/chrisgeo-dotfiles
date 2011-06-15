@@ -1,0 +1,7 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhist_cnt =5
+let g:netrw_dirhist_1='/Users/chrisg/projects/howler/trunk/python/baboon'
+let g:netrw_dirhist_2='/Users/chrisg/projects/howler/trunk/python/baboon/baboon'
+let g:netrw_dirhist_3='/Users/chrisg/projects/howler/trunk/python/baboon/baboon/model'
+let g:netrw_dirhist_4='/Users/chrisg/.vim/ftplugin/javascript'
+let g:netrw_dirhist_5='/Users/chrisg/.vim'

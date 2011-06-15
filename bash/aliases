@@ -1,0 +1,3 @@
+alias ls='gls -Fh --color=auto'
+alias l='gls -a1 --color=auto'
+

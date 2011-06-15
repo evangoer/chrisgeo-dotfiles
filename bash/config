@@ -1,0 +1,36 @@
+CDPATH=".:$HOME:/Volumes"
+
+# history
+if [ -f "$HOME/Dropbox/.dotfiles/history" ]; then
+  HISTFILE="$HOME/Dropbox/.dotfiles/history"
+else
+  HISTFILE="$HOME/.history"
+fi
+
+HISTSIZE=10000
+SAVEHIST=10000
+HISTFILESIZE=10000
+HISTCONTROL="ignoreboth":
+APPEND_HISTORY=1
+
+#========
+# Some bash Complettions
+#
+#========
+if [ -f /opt/local/etc/bash_completion ]; then
+    . /opt/local/etc/bash_completion
+fi
+
+#============
+# Virtual Env Wrapper (Python)
+#
+#============
+if [ -f /usr/local/bin/virtualenvwrapper.sh ]; then
+  source /usr/local/bin/virtualenvwrapper.sh
+fi
+
+if [ "$TERM" != "dumb" ]; then
+#export LS_OPTIONS='--color=auto'
+  eval `gdircolors ~/.dir_colors`
+fi
+
