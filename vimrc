@@ -57,8 +57,22 @@ set backupdir=/tmp
 if has("vms")
   set nobackup          " do not keep a backup file, use versions instead
 else
-"  set backup           " keep a backup file
-"  set backupdir="~/backup"
+  set backup           " keep a backup file
+  "Create a backup folder, I like to have it in $HOME/vimbackup/date/
+  let day = strftime("%Y.%m.%d")
+  let backupdir = $HOME."/.vim/tmp/backup/".day
+  silent! let xyz = mkdir(backupdir, "p")
+  
+  "Set the backup folder
+  let cmd = "set backupdir=".backupdir
+  execute cmd
+  
+  "Create an extention for backup file, useful when you are modifying the 
+  ""same file multiple times in a day. I like to have an extention with
+  "time hour.min.sec
+  let time = strftime(".%H.%M.%S")
+  let cmd = "set backupext=". time
+  execute cmd
 endif
 
 "colorscheme mustang
