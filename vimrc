@@ -12,9 +12,9 @@ set encoding=utf-8
 
 " Whitespace stuff
 set nowrap
-set tabstop=2
-set shiftwidth=2
-set softtabstop=2
+set tabstop=4
+set shiftwidth=4
+set softtabstop=4
 set expandtab
 set list listchars=tab:\ \ ,trail:·
 set autoindent          " always set autoindenting on
@@ -75,8 +75,7 @@ else
   execute cmd
 endif
 
-"colorscheme mustang
-color  mustang
+colorscheme mustang
 
 "http://www.vim.org/tips/tip.php?tip_id=696
 " dont let mouse switch into selection mode
@@ -165,7 +164,7 @@ au BufRead,BufNewFile *.{md,markdown,mdown,mkd,mkdn} call s:setupMarkup()
 au BufRead,BufNewFile *.txt call s:setupWrapping()
 
 " make python follow PEP8 ( http://www.python.org/dev/peps/pep-0008/ )
-au FileType python  set tabstop=4 textwidth=79
+au FileType python  set tabstop=4 shiftwidth=4 softtabstop=4 textwidth=79
 
 " make javascript type at 80 chars
 au FileType javascript set tabstop=4 textwidth=80
