@@ -108,8 +108,6 @@ map <buffer> <S-e> :w<CR>:!/usr/bin/env python % <CR>
 
 "Enable HTML syntax highlighting inside strings: >
 let php_htmlInStrings = 1
-"Enable folding for classes and functions: >
-let python_folding = 1
 
 "-----------
 "Janus
@@ -224,4 +222,5 @@ function! HighlightRepeats() range
 endfunction
 
 command! -range=% HighlightRepeats <line1>,<line2>call HighlightRepeats()
-
+" Folding
+setlocal foldcolumn=3
