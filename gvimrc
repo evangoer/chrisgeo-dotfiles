@@ -7,8 +7,9 @@ endif
 
 if has("gui_macvim")
   " Fullscreen takes up entire screen
+  colorscheme railscasts2
   set fuoptions=maxhorz,maxvert
-
+    
   " Command-T for CommandT
   "macmenu &File.New\ Tab key=<D-T>
   "map <D-t> :CommandT<CR>
