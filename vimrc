@@ -75,7 +75,7 @@ else
   execute cmd
 endif
 
-colorscheme mustang
+colorscheme railscasts
 
 "http://www.vim.org/tips/tip.php?tip_id=696
 " dont let mouse switch into selection mode
@@ -105,6 +105,9 @@ au BufRead,BufNewFile *.jinja2,*.jtmpl set filetype=htmljinja
 autocmd FileType python set complete+=k~/.vim/syntax/python.vim isk+=.,(
 " Execute file being edited with <Shift> + e:
 map <buffer> <S-e> :w<CR>:!/usr/bin/env python % <CR>
+
+"JSON in javascript
+autocmd BufNewFile,BufRead *.json set ft=javascript
 
 "Enable HTML syntax highlighting inside strings: >
 let php_htmlInStrings = 1
